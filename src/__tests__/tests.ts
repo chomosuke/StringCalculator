@@ -1,4 +1,4 @@
-import { add } from "../main";
+import { add } from '../add';
 
 describe('add tests', () => {
     test('empty string returns 0', () => {
