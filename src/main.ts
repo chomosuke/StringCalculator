@@ -1,4 +1,7 @@
 
 export function add(str: string): number {
-    return 0;
+    if (str == '') {
+        return 0;
+    }
+    return parseInt(str);
 }
