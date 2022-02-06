@@ -9,4 +9,9 @@ describe('add tests', () => {
         expect(add('1')).toStrictEqual(1);
         expect(add('3')).toStrictEqual(3);
     });
+
+    test('add two numbers', () => {
+        expect(add('1,2')).toStrictEqual(3);
+        expect(add('3,5')).toStrictEqual(8);
+    });
 });
