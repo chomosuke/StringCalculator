@@ -14,4 +14,9 @@ describe('add tests', () => {
         expect(add('1,2')).toStrictEqual(3);
         expect(add('3,5')).toStrictEqual(8);
     });
+
+    test('add any numbers', () => {
+        expect(add('1,2,3')).toStrictEqual(6);
+        expect(add('3,5,3,9')).toStrictEqual(20);
+    });
 });
