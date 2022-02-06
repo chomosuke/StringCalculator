@@ -24,4 +24,8 @@ describe('add tests', () => {
         expect(add('1,2\n3')).toStrictEqual(6);
         expect(add('3\n5\n3,9')).toStrictEqual(20);
     });
+    
+    test('have any delimiters', () => {
+        expect(add('//;\n1;2')).toStrictEqual(3);
+    });
 });
