@@ -28,4 +28,8 @@ describe('add tests', () => {
     test('have any delimiters', () => {
         expect(add('//;\n1;2')).toStrictEqual(3);
     });
+
+    test('no negative numbers', () => {
+        expect(add('-1,2,-3')).toThrow(new Error('Negatives not allowed: -1, -3'));
+    });
 });
