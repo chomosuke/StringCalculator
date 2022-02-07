@@ -30,6 +30,6 @@ describe('add tests', () => {
     });
 
     test('no negative numbers', () => {
-        expect(add('-1,2,-3')).toThrow(new Error('Negatives not allowed: -1, -3'));
+        expect(() => add('-1,2,-3')).toThrow(new Error('Negatives not allowed: -1, -3'));
     });
 });

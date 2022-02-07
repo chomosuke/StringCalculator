@@ -10,5 +10,10 @@ export function add(str: string): number {
         delimiter = str.substring(2, firstBreak);
         str = str.substring(firstBreak + 1);
     }
-    return str.split(delimiter).map(n => parseInt(n)).reduce((p, c) => p + c);
+    const nums = str.split(delimiter).map(n => parseInt(n));
+    const neg = nums.filter(n => n < 0);
+    if (neg.length > 0) {
+        throw new Error('Negatives not allowed: ' + neg.join(', '));
+    }
+    return nums.reduce((p, c) => p + c);
 }
