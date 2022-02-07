@@ -32,4 +32,8 @@ describe('add tests', () => {
     test('no negative numbers', () => {
         expect(() => add('-1,2,-3')).toThrow(new Error('Negatives not allowed: -1, -3'));
     });
+
+    test('igore num > 1000', () => {
+        expect(add('1000,1001,2')).toStrictEqual(2);
+    });
 });
