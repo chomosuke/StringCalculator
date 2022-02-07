@@ -3,7 +3,10 @@ export function add(str: string): number {
         return 0;
     }
 
-    let delimiters: string[] = [',', '\n'];
+    let delimiters: string[] = [
+        ',',
+        '\n',
+    ];
     
     if (str.length >= 2 && str.substring(0, 2) == '//') {
         const firstBreak = str.indexOf('\n');
