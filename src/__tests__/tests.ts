@@ -40,4 +40,8 @@ describe('add tests', () => {
     test('delimiter any length', () => {
         expect(add('//[***]\n1***2***3')).toStrictEqual(6);
     });
+
+    test('multi delimiters', () => {
+        expect(add('//[*][%]\n1*2%3')).toStrictEqual(6);
+    });
 });
