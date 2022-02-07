@@ -36,4 +36,8 @@ describe('add tests', () => {
     test('ignore num > 1000', () => {
         expect(add('1000,1001,2')).toStrictEqual(2);
     });
+
+    test('delimiter any length', () => {
+        expect(add('//[***]\n1***2***3')).toStrictEqual(6);
+    });
 });
