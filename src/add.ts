@@ -10,7 +10,10 @@ export function add(str: string): number {
         delimiter = str.substring(2, firstBreak);
         str = str.substring(firstBreak + 1);
     }
-    const nums = str.split(delimiter).map(n => parseInt(n));
+    const nums = str.split(delimiter).map(n => { 
+        const num = parseInt(n);
+        return num >= 1000 ? 0 : num;
+    });
     const neg = nums.filter(n => n < 0);
     if (neg.length > 0) {
         throw new Error('Negatives not allowed: ' + neg.join(', '));
